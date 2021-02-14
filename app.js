@@ -24,7 +24,7 @@ const showImages = (images) => {
   toggleSpinner();
   // show gallery title
   galleryHeader.style.display = 'flex';
-  countImage.style.display = 'flex'
+  countImage.style.display = 'block'
   images.forEach(image => {
     let div = document.createElement('div');
     div.className = 'col-lg-3 col-md-4 col-xs-6 img-item mb-2';
@@ -42,7 +42,7 @@ searchArea.addEventListener("keypress", function (event) {
   }
 
 });
-
+//time interval function added
 const getImages = (query) => {
   setTimeout(() => {
     fetch(`https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`)
@@ -51,7 +51,7 @@ const getImages = (query) => {
       .catch(err => console.log(err));
   }, 2000);
 };
-
+//Count image feature added
 let slideIndex = 0;
 let count = 0;
 const selectItem = (event, img) => {
@@ -153,6 +153,7 @@ sliderBtn.addEventListener('click', function () {
     createSlider(duration)
   }
 })
+// spinner feature added
 
 const toggleSpinner = () => {
   const spinner = document.getElementById('spinner');
