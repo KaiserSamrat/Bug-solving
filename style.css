@@ -59,6 +59,13 @@ img {
   text-align: center;
   margin-top: 10px;
 }
+#count-images{
+  display: none;
+  color: #1e1743;
+  margin-left: 42px;
+  background-color: seashell;
+  
+}
 @media (max-width: 767px) {
   .justify-content-around.align-items-center.mt-3.gallery-header.mb-2 {
     flex-direction: column;
